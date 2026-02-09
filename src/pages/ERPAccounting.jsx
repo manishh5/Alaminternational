@@ -52,7 +52,7 @@ export default function ERPAccounting() {
             
             <button className="inline-flex items-center gap-2 px-6 py-3 bg-white text-orange-600 font-bold rounded-full hover:bg-orange-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 whitespace-nowrap">
                 <a
-                href="https://sarvat-indane-sewa.base44.app"
+                href="https://sarvatindanesewa.in"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-white text-orange-600 font-bold rounded-full hover:bg-orange-50 hover:shadow-2xl hover:scale-105 transition-all duration-300 whitespace-nowrap"
@@ -78,9 +78,9 @@ export default function ERPAccounting() {
             {/* <a href="https://sarvat-indane-sewa.base44.app" className="text-sm font-medium text-gray-700 hover:text-orange-600 transition-colors whitespace-nowrap">
               New User
             </a> */}
-            <a href="https://alambrothersinternational.com/login?from_url=https%3A%2F%2Falambrothersinternational.com%2FAdminDashboard" className="text-sm font-medium text-gray-700 hover:text-orange-600 transition-colors whitespace-nowrap">
+            {/* <a href="https://sarvatindanesewa.in/login?from_url=https%3A%2F%2Fsarvatindanesewa.in%2FAdminDashboard" className="text-sm font-medium text-gray-700 hover:text-orange-600 transition-colors whitespace-nowrap">
               Manager Login
-            </a>
+            </a> */}
             <a href="#safety" className="text-sm font-medium text-gray-700 hover:text-orange-600 transition-colors whitespace-nowrap">
               Safety
             </a>
@@ -112,21 +112,21 @@ export default function ERPAccounting() {
               title: "Home Delivery",
               subtitle: "(For Users)",
               color: "from-red-500 to-rose-600",
-              link: "https://sarvat-indane-sewa.base44.app"
+              link: "https://sarvatindanesewa.in"
             },
             {
               icon: CreditCard,
               title: "Quick Booking",
               subtitle: "(For non-users)",
               color: "from-orange-500 to-amber-600",
-              link: "https://sarvat-indane-sewa.base44.app/EasyBooking"
+              link: "https://sarvatindanesewa.in/EasyBooking"
             },
             {
               icon: Shield,
               title: "Vendor Login",
               subtitle: "",
               color: "from-blue-500 to-cyan-600",
-              link: "https://sarvat-indane-sewa.base44.app/VendorLogin"
+              link: "https://sarvatindanesewa.in/VendorLogin"
             }
           ].map((feature, index) => (
             <a
