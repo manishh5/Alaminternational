@@ -47,18 +47,32 @@
  *
  * The mainPage value must match a key in the PAGES object exactly.
  */
+
+import CustomerReviews from './pages/CustomerReviews';
+import ERPAccounting from './pages/ERPAccounting';
 import Home from './pages/Home';
 import TaxServices from './pages/TaxServices';
 import NetworkServices from './pages/NetworkServices';
-import ERPAccounting from './pages/ERPAccounting';
-import CustomerReviews from './pages/CustomerReviews';
+import CashServices from './pages/CashServices';
+import TouristTransport from './pages/TouristTransport';
+import Construction from './pages/Construction';
+import WasteRecycling from './pages/WasteRecycling';
+import CryptoExchange from './pages/CryptoExchange';
+import Textile from './pages/Textile';
+
 
 export const PAGES = {
+    "CustomerReviews": CustomerReviews,
+    "ERPAccounting": ERPAccounting,
     "Home": Home,
     "TaxServices": TaxServices,
     "NetworkServices": NetworkServices,
-    "ERPAccounting": ERPAccounting,
-    "CustomerReviews": CustomerReviews
+    "CashServices": CashServices,
+    "TouristTransport": TouristTransport,
+    "Construction": Construction,
+    "WasteRecycling": WasteRecycling,
+    "CryptoExchange": CryptoExchange,
+    "Textile": Textile,
 }
 
 export const pagesConfig = {

@@ -22,14 +22,100 @@ const services = [
   {
     id: 2,
     title: "ABI Network Solution Services",
-    description: "Digital solutions including accounting software, social media management, and more.",
+    description: "Digital solutions like accounting software, social media, and more.",
     icon: "server",
     color: "from-blue-500 to-indigo-600",
     subItems: [
       "ABI (ERP) Accounting (Web & Apps)",
-      "Social Media Promotion (Facebook, Instagram & YouTube etc.)",
+      "Social Media Promotion (Facebook, Instagram & YouTube)",
       "Other Services"
     ]
+  },
+  {
+    id: 3,
+    title: "ABI Cash Deposit & Withdrawal Services",
+    description: "Secure and convenient banking services for cash transactions and financial management.",
+    icon: "landmark",
+    color: "from-purple-500 to-violet-600",
+    subItems: [
+      "Secure Cash Deposit into Bank Accounts",
+      "Instant Transaction Processing",
+      "Easy Cash Withdrawal Facility",
+      "Secure & Reliable Processing"
+    ]
+  },
+  {
+    id: 4,
+    title: "ABI Tourist and Transport Services",
+    description: "Reliable transportation and tourism solutions for your travel needs.",
+    icon: "truck",
+    color: "from-orange-500 to-red-600",
+    subItems: [
+      "Group Tour Management (20-50+ persons)",
+      "Tourist Vehicle Services",
+      "Goods Transportation",
+      "Truck & Commercial Vehicle Operations"
+    ]
+  },
+  {
+    id: 5,
+    title: "ABI Construction & Development",
+    description: "Complete construction and infrastructure development services.",
+    icon: "building",
+    color: "from-slate-500 to-gray-600",
+    subItems: [
+      "Plot Buying & Selling",
+      "Land Development & Subdivision",
+      "Residential Construction",
+      "Property Sales & Rental Management"
+    ]
+  },
+  {
+    id: 6,
+    title: "ABI Waste Recycling Management",
+    description: "Sustainable waste management and recycling solutions for a cleaner environment.",
+    icon: "recycle",
+    color: "from-green-500 to-emerald-600",
+    subItems: [
+      "Plastic Recycling",
+      "Poly Bag Recycling",
+      "Textile Recycling",
+      "Iron Recycling"
+    ]
+  },
+  {
+    id: 7,
+    title: "ABI Crypto & Currency Exchange",
+    description: "Digital currency exchange and cryptocurrency trading services.",
+    icon: "bitcoin",
+    color: "from-amber-500 to-yellow-600",
+    subItems: [
+      "Digital Currency Trading",
+      "Virtual Asset Exchange",
+      "Cryptocurrency Trading",
+      "International Currency Exchange"
+    ]
+  },
+  {
+    id: 8,
+    title: "ABI Textile",
+    description: "Quality textile products and fabric solutions for all your needs.",
+    icon: "layers",
+    color: "from-pink-500 to-rose-600",
+    subItems: [
+      "Fabric Trading",
+      "Garment Manufacturing",
+      "Textile Raw Material Supply",
+      "Apparel Production"
+    ]
+  },
+  {
+    id: 9,
+    title: "Multiple Diverse Business Sectors",
+    description: "Expanding into various industries to serve diverse business needs.",
+    icon: "briefcase",
+    color: "from-indigo-500 to-purple-600",
+    subItems: ["Expansion Projects – Coming Soon"]
   },
 ];
 
@@ -66,12 +152,35 @@ export default function Home() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-6xl mx-auto">
-          {services.map((service, index) => (
-            <Link key={service.id} to={createPageUrl(service.id === 1 ? 'TaxServices' : 'NetworkServices')}>
-              <ServiceCard service={service} index={index} />
-            </Link>
-          ))}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 max-w-7xl mx-auto">
+          {services.map((service, index) => {
+            const getPageUrl = (id) => {
+              const pageMap = {
+                1: 'TaxServices',
+                2: 'NetworkServices',
+                3: 'CashServices',
+                4: 'TouristTransport',
+                5: 'Construction',
+                6: 'WasteRecycling',
+                7: 'CryptoExchange',
+                8: 'Textile'
+              };
+              return pageMap[id] ? createPageUrl(pageMap[id]) : null;
+            };
+            
+            const pageUrl = getPageUrl(service.id);
+            const isClickable = pageUrl !== null;
+            
+            return isClickable ? (
+              <Link key={service.id} to={pageUrl}>
+                <ServiceCard service={service} index={index} />
+              </Link>
+            ) : (
+              <div key={service.id}>
+                <ServiceCard service={service} index={index} />
+              </div>
+            );
+          })}
         </div>
       </section>
 
@@ -81,10 +190,10 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-10 md:gap-16">
             {[
-              { value: "2+", label: "Service Divisions" },
-              { value: "100+", label: "Happy Clients" },
-              { value: "500+", label: "Projects Completed" },
-              { value: "5+", label: "Years Experience" },
+              { value: "9+", label: "Service Divisions" },
+              { value: "1000+", label: "Happy Clients" },
+              { value: "2500+", label: "Projects Completed" },
+              { value: "10+", label: "Years Experience" },
             ].map((stat, i) => (
               <motion.div
                 key={i}
