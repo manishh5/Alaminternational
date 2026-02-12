@@ -75,7 +75,7 @@ export default function NetworkServices() {
             const Icon = service.icon;
             const isERPService = service.id === 1;
             const CardWrapper = isERPService ? Link : 'div';
-            const cardProps = isERPService ? { to: createPageUrl('ERPAccounting') } : {};
+            const cardProps = isERPService ? { to: createPageUrl('CustomerReviews') } : {};
             
             return (
               <CardWrapper

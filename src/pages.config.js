@@ -51,13 +51,14 @@ import Home from './pages/Home';
 import TaxServices from './pages/TaxServices';
 import NetworkServices from './pages/NetworkServices';
 import ERPAccounting from './pages/ERPAccounting';
-
+import CustomerReviews from './pages/CustomerReviews';
 
 export const PAGES = {
     "Home": Home,
     "TaxServices": TaxServices,
     "NetworkServices": NetworkServices,
-    "ERPAccounting": ERPAccounting
+    "ERPAccounting": ERPAccounting,
+    "CustomerReviews": CustomerReviews
 }
 
 export const pagesConfig = {
