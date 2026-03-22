@@ -24,7 +24,7 @@ export default function Footer() {
               className="inline-flex items-center gap-2 text-xs text-gray-500 hover:text-gray-900 transition-colors"
             >
               <Github className="w-4 h-4" />
-              GitHub Repository
+              GitHub
             </a>
         </div>
       </div>
